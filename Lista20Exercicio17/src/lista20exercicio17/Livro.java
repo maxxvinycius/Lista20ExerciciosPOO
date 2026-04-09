@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lista20exercicio17;
+
+/**
+ *
+ * @author maxvi
+ */
+public class Livro extends ItemBiblioteca {
+
+    public Livro(String titulo, int codigo) {
+        super(titulo, codigo);
+    }
+
+    @Override
+    public void emprestar() {
+        if (isDisponivel()) {
+            System.out.println("Livro emprestado por 7 dias.");
+            setDisponivel(false);
+        } else {
+            System.out.println("Livro já está emprestado.");
+        }
+    }
+}
