@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lista20exercicio15;
+
+/**
+ *
+ * @author maxvi
+ */
+public class Pizza extends ItemCardapio {
+
+    public Pizza(String nome, double preco, String descricao) {
+        super(nome, preco, descricao);
+    }
+
+    @Override
+    public void preparar() {
+        System.out.println("Assando a pizza no forno...");
+    }
+
+    @Override
+    public double calcularPreco() {
+        return getPreco() + 5; // taxa extra
+    }
+}
